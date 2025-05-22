@@ -131,12 +131,18 @@
     <ClCompile Include="Kolumna.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Plansza.cpp" />
+    <ClCompile Include="Rozgrywka.cpp" />
+    <ClCompile Include="StosKoncowy.cpp" />
+    <ClCompile Include="StosRezerwowy.cpp" />
     <ClCompile Include="Talia.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Karta.h" />
     <ClInclude Include="Kolumna.h" />
     <ClInclude Include="Plansza.h" />
+    <ClInclude Include="Rozgrywka.h" />
+    <ClInclude Include="StosKoncowy.h" />
+    <ClInclude Include="StosRezerwowy.h" />
     <ClInclude Include="Talia.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

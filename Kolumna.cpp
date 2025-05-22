@@ -1,10 +1,16 @@
 #include "Kolumna.h"
 #include <algorithm>
+#include "Talia.h"
 
-Kolumna::Kolumna(int liczbaZakrytych)
+Kolumna::Kolumna(int numerKolumny, Talia& talia)
 {
-    // konstruktor zostawiam pusty – logika zale¿y od sposobu rozk³adania kart
-    // mo¿esz wczytaæ odpowiedni¹ liczbê kart z Talii i zakryæ je, jeœli chcesz
+    for (int i = 0; i < numerKolumny; i++)
+    {
+        Karta rozkladana = talia.rozdajKarte();
+        karty.push_back(rozkladana);
+    }
+    Karta doOdkrycia = karty.front();
+    doOdkrycia.odkryj();
 }
 
 bool Kolumna::czyMoznaDodac(const Karta& nowa,
@@ -12,10 +18,10 @@ bool Kolumna::czyMoznaDodac(const Karta& nowa,
 {
     bool roznyKolor = Karta::czyCzerwony(nowa.pobierzKolor()) !=
         Karta::czyCzerwony(naStosie.pobierzKolor());
-    bool mniejszaOJed = static_cast<int>(nowa.pobierzWartosc()) + 1 ==
+    bool mniejszaOJeden = static_cast<int>(nowa.pobierzWartosc()) + 1 ==
         static_cast<int>(naStosie.pobierzWartosc());
 
-    return roznyKolor && mniejszaOJed;
+    return roznyKolor && mniejszaOJeden;
 }
 
 void Kolumna::dodajKarte(const Karta& nowa)

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <vector>
 #include "Karta.h"
 
@@ -7,13 +7,14 @@ class Talia
 public:
     Talia();                 // tworzy i tasuje talie
 
-    Karta rozdajKarte();     // zwraca kartê z góry talii
-    void  tasuj();           // ponowne tasowanie (Fisher?Yates)
+    Karta rozdajKarte();     // zwracaÂ kartÄ™ zÂ gÃ³ry talii
+    void  tasuj();  
+    std::vector<Karta> wezTalie()const { return talia; }
 
 private:
     std::vector<Karta> talia;
 
-    void stworzKarty();      // 52 karty w standardowej talii
+    void stworzKarty();      // 52Â karty wÂ standardowej talii
 };
 
 

@@ -23,6 +23,8 @@ public:
     void zakryj();
     std::string toString() const;
 
+    bool operator==(const Karta& inna) const;
+
 private:
     Kolor   kolor;
     Wartosc wartosc;

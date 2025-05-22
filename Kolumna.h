@@ -1,11 +1,12 @@
 #pragma once
 #include <vector>
 #include "Karta.h"
+#include "Talia.h"
 
 class Kolumna
 {
 public:
-    explicit Kolumna(int liczbaZakrytych = 0);       // ile kart startowo zakrytych
+    Kolumna(int numerKolumny, Talia& talia);      
 
     bool  czyMoznaDodac(const Karta& nowa,
         const Karta& naStosie) const; // klasyczne zasady pasjansa

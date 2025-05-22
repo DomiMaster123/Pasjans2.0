@@ -1,5 +1,6 @@
 #include "Karta.h"
 
+
 Karta::Karta(Kolor k, Wartosc w, bool z)
     : kolor(k), wartosc(w), zakryta(z) {
 }
@@ -24,5 +25,10 @@ std::string Karta::toString() const
     { u8"\u2665",u8"\u2666",u8"\u2660",u8"\u2663" };
 
     return nazwyWartosci[wartosc - 1] + " " + nazwyKolorow[kolor - 1];
+}
+
+bool Karta::operator==(const Karta& inna) const
+{
+    return pobierzKolor() == inna.pobierzKolor()  && pobierzWartosc() == inna.pobierzWartosc();
 }
 
