@@ -1,6 +1,5 @@
 #include "Kolumna.h"
-#include <algorithm>
-#include "Talia.h"
+
 
 Kolumna::Kolumna(int numerKolumny, Talia& talia)
 {
@@ -60,10 +59,10 @@ void Kolumna::usunKartyOdIndexu(int index)
     }
 }
 
-bool Kolumna::czyMoznaZabrac(const Karta& zabierana) const
+bool Kolumna::czyMoznaZabrac(int index) const
 {
-    return std::find(karty.begin(), karty.end(), zabierana) != karty.end();
-    // UWAGA: ¿eby to dzia³a³o, musia³byœ przeci¹¿yæ operator== w Karta
+    
+    
 }
 int Kolumna::rozmiar() const {
     return karty.size();
