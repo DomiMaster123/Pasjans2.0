@@ -1,3 +1,4 @@
+#pragma once 
 #include <algorithm>
 #include <iostream>
 #include "Talia.h"
@@ -5,6 +6,7 @@
 class Kolumna  
 {  
 public:  
+    Kolumna();
     Kolumna(int numerKolumny, Talia & talia);      
 
     bool  czyMoznaDodac(const Karta & nowa, const Karta & naStosie) const; // klasyczne zasady pasjansa  

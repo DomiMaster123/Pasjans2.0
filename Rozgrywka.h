@@ -4,12 +4,13 @@
 #include "Kolumna.h"
 #include "StosRezerwowy.h"
 #include <iostream>
+#include <vector>
 class Rozgrywka
 {
 
 public:
 	Talia talia;
-	vector<Kolumna> kolumny;
+	std::vector<Kolumna> kolumny;
 	Rozgrywka()
 	{
 
@@ -27,19 +28,9 @@ public:
 		StosRezerwowy stosRezerwowy(talia);
 	};
 	
-	void zKolumnyDoKolumny(int numerKolumnyZrodlowej, int numerKolumnyDocelowej, int iloscKartZabieranych)
-	{
-		Kolumna kolumnaZrodlowa = kolumny[numerKolumnyZrodlowej - 1];
-		Kolumna kolumnaDocelowa = kolumny[numerKolumnyDocelowej - 1];
-		if (iloscKartZabieranych > kolumnaZrodlowa.rozmiar()) {
-			std::cout << "Nie mozna zabrac kart" << std::endl;
-		}
-		else if (kolumnaZrodlowa.czyPusta()) {
-
-			std::cout << "Nie mozna zabrac kart" << std::endl;
-		}
-		else if (kolumnaZrodlowa.czyMoznaZabrac() && kolumnaDocelowa.czyMoznaDodac())
-	} ;
+	void zKolumnyDoKolumny(int numerKolumnyZrodlowej, int numerKolumnyDocelowej, int iloscKartZabieranych){
+		
+	}
 	void ZeStosuDoKolumny(int numerKolumnyZrodlowej)
 	{
 

@@ -1,6 +1,10 @@
 #include "Kolumna.h"
 
 
+Kolumna::Kolumna()
+{
+}
+
 Kolumna::Kolumna(int numerKolumny, Talia& talia)
 {
     for (int i = 0; i < numerKolumny; i++)
@@ -62,7 +66,7 @@ void Kolumna::usunKartyOdIndexu(int index)
 bool Kolumna::czyMoznaZabrac(int index) const
 {
     
-    
+    return true;
 }
 int Kolumna::rozmiar() const {
     return karty.size();

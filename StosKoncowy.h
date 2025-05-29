@@ -6,6 +6,7 @@ class StosKoncowy
 {
 private:
 	std::vector<Karta> stosKoncowy;
+	Karta::Kolor kolor;
 public:
 	StosKoncowy();
 

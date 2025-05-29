@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include <vector>
+#include <algorithm>
+#include <random>
 #include "Karta.h"
 
 class Talia

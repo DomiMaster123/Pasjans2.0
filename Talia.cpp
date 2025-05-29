@@ -1,6 +1,5 @@
 #include "Talia.h"
-#include <algorithm>
-#include <random>
+
 
 Talia::Talia()
 {
