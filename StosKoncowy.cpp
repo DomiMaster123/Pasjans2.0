@@ -1,5 +1,9 @@
 #include "StosKoncowy.h"
 
+StosKoncowy::StosKoncowy()
+{
+}
+
 void StosKoncowy::polozKarte(Karta kladzionaKarta)
 {
 	if (stosKoncowy.empty()) {
