@@ -11,9 +11,10 @@ Kolumna::Kolumna(int numerKolumny, Talia& talia)
     {
         Karta rozkladana = talia.rozdajKarte();
         karty.push_back(rozkladana);
-         karty[karty.size()-1].odkryj();
         
     }
+    
+    karty[karty.size() - 1].odkryj();
     
     
 }
