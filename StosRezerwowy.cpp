@@ -20,9 +20,10 @@ Karta StosRezerwowy::pobierzKarteZeStosu()
     if (!stosRezerwowy.empty()) {  
         Karta pobieranaZeStosu = stosRezerwowy.front();  
         stosRezerwowy.erase(stosRezerwowy.begin());  
-        return pobieranaZeStosu;  
         Karta kartaNaGorze = stosRezerwowy.front();
         kartaNaGorze.odkryj();
+        return pobieranaZeStosu;  
+        
     }  
     else {  
         std::cout << "Stos jest pusty!" << std::endl;  

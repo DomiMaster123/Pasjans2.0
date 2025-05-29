@@ -11,11 +11,12 @@ Kolumna::Kolumna(int numerKolumny, Talia& talia)
     {
         Karta rozkladana = talia.rozdajKarte();
         karty.push_back(rozkladana);
-        rozkladana.toString();
+        Karta doOdkrycia = karty[karty.back() - 1];
+        doOdkrycia.odkryj();
+        
     }
-    Karta doOdkrycia = karty.front();
-    doOdkrycia.odkryj();
-    doOdkrycia.toString();
+    
+    
 }
 
 bool Kolumna::czyMoznaDodac(const Karta& nowa,
@@ -83,3 +84,18 @@ bool Kolumna::czyPusta() const
         return false;
     }
 }
+std::vector<Karta> Kolumna::WezKolumne()
+{
+    return karty;
+}
+
+std::string Kolumna::KolumnaToString()
+{
+    std::string CalaKolumna;
+    for (int i = 0; i < karty.size(); i++)
+    {
+        CalaKolumna = CalaKolumna + " " + karty[i].toString();
+    }
+    return CalaKolumna;
+}
+

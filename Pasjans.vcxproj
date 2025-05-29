@@ -139,7 +139,6 @@
   <ItemGroup>
     <ClInclude Include="Karta.h" />
     <ClInclude Include="Kolumna.h" />
-    <ClInclude Include="Plansza.h" />
     <ClInclude Include="Rozgrywka.h" />
     <ClInclude Include="StosKoncowy.h" />
     <ClInclude Include="StosRezerwowy.h" />

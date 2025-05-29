@@ -50,9 +50,6 @@
     <ClInclude Include="Kolumna.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="Plansza.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="StosRezerwowy.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>

@@ -11,6 +11,10 @@ using namespace std;
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
-    Rozgrywka rozgrywka;
+    Talia talia;
+    Kolumna kolumna(4, talia);
+    cout << kolumna.KolumnaToString() << endl;
+
+    
     
 }

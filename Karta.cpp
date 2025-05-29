@@ -25,7 +25,7 @@ std::string Karta::toString() const
         static const std::string nazwyKolorow[] =
         { u8"\u2665",u8"\u2666",u8"\u2660",u8"\u2663" };
 
-        return nazwyWartosci[wartosc - 1] + " " + nazwyKolorow[kolor - 1];
+        return nazwyWartosci[wartosc - 1] + nazwyKolorow[kolor - 1];
     }
     else {
         return "[?]";
