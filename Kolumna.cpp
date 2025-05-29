@@ -5,6 +5,14 @@ Kolumna::Kolumna()
 {
 }
 
+Kolumna::Kolumna(std::vector<Karta> kolumna)
+{
+    for (int i = 0; i < kolumna.size(); i++) {
+        karty.push_back(kolumna[i]);
+    }
+    karty[karty.size() - 1].odkryj();
+}
+
 Kolumna::Kolumna(int numerKolumny, Talia& talia)
 {
     for (int i = 0; i < numerKolumny; i++)
@@ -52,6 +60,9 @@ void Kolumna::dodajKarte(const Karta& nowa)
 {
     if (karty.empty() || czyMoznaDodac(nowa, karty.back()))
         karty.push_back(nowa);
+    else {
+        std::cout << "Nie mozna polozyc tej karty" << std::endl;
+    }
 }
 
 void Kolumna::usunKartyOdIndexu(int index)

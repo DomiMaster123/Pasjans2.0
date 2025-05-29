@@ -7,6 +7,7 @@ class Kolumna
 {  
 public:  
     Kolumna();
+    Kolumna(std::vector<Karta> kolumna);
     Kolumna(int numerKolumny, Talia & talia);      
 
     bool  czyMoznaDodac(const Karta & nowa, const Karta & naStosie) const; 
