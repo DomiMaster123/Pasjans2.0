@@ -65,20 +65,44 @@ void Kolumna::dodajKarte(const Karta& nowa)
     }
 }
 
-void Kolumna::usunKartyOdIndexu(int index)
+void Kolumna::zabierzKartyOdIndexu(int index)
 {
-    if (index >= 0 && index < static_cast<int>(karty.size()))
+    if(czyMoznaZabrac(index))
     {
-        karty.erase(karty.begin() + index, karty.end());
-        if (!karty.empty())
-            const_cast<Karta&>(karty.back()).odkryj();
+        if (index >= 0 && index < static_cast<int>(karty.size()))
+        {
+            karty.erase(karty.begin() + index - 1, karty.end());
+            if (!karty.empty())
+                const_cast<Karta&>(karty.back()).odkryj();
+        }
+        else {
+            std::cout << "Nie mozna zabrac kart" << std::endl;
+        }
+    }
+    else {
+        std::cout << "Nie mozna zabrac kart" << std::endl;
     }
 }
 
 bool Kolumna::czyMoznaZabrac(int index) const
 {
+    if (!karty.empty()) {
+        if (index <= karty.size()) {
+            if (karty[index].czyZakryta()) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
+    }
+    else {
+        return false;
+    }
     
-    return true;
 }
 int Kolumna::rozmiar() const {
     return karty.size();
@@ -95,6 +119,7 @@ bool Kolumna::czyPusta() const
         return false;
     }
 }
+
 std::vector<Karta> Kolumna::WezKolumne()
 {
     return karty;

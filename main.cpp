@@ -16,7 +16,7 @@ int main()
     Karta karta(Karta::Kolor::Kier, Karta::Wartosc::Dziesiec);
     Karta karta2(Karta::Kolor::Pik, Karta::Wartosc::Dziewiec);
     Karta karta3(Karta::Kolor::Karo, Karta::Wartosc::Jopek);
-    Karta karta4(Karta::Kolor::Karo, Karta::Wartosc::As);
+    Karta karta4(Karta::Kolor::Trefl, Karta::Wartosc::Dziesiec);
     karta4.odkryj();
     vector<Karta> kolumna1;
     kolumna1.push_back(karta);
@@ -25,6 +25,7 @@ int main()
 
     Kolumna kolumna(kolumna1);
     kolumna.dodajKarte(karta4);
+    kolumna.zabierzKartyOdIndexu(2);
     
 
     

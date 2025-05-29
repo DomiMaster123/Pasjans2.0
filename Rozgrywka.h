@@ -19,7 +19,7 @@ public:
 		}
 
 
-		StosKoncowy stosKoncowy1, stosKoncowy2, stosKoncowy3, stosKoncowy4;
+		StosKoncowy stosKoncowy1(Karta::Kolor::Kier), stosKoncowy2(Karta::Kolor::Karo), stosKoncowy3(Karta::Kolor), stosKoncowy4;
 
 
 
@@ -28,8 +28,10 @@ public:
 		StosRezerwowy stosRezerwowy(talia);
 	};
 	
-	void zKolumnyDoKolumny(int numerKolumnyZrodlowej, int numerKolumnyDocelowej, int iloscKartZabieranych){
-		
+	void zKolumnyDoKolumny(int numerKolumnyZrodlowej, int numerKolumnyDocelowej, int index){
+		if (numerKolumnyZrodlowej <= 7 && numerKolumnyDocelowej <= 7) {
+			if(index < kolumny[numerKolumnyZrodlowej - 1].WezKolumne().size())
+		}
 	}
 	void ZeStosuDoKolumny(int numerKolumnyZrodlowej)
 	{

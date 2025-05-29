@@ -8,7 +8,7 @@ private:
 	std::vector<Karta> stosKoncowy;
 	Karta::Kolor kolor;
 public:
-	StosKoncowy();
+	StosKoncowy(Karta::Kolor kolor);
 
 	/* funkcja DodajKarte:
 	1.sprawdzamy czy ta karta znajduje sie w kolumnach lub na stosie rezerwowym

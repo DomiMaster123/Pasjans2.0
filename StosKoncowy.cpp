@@ -1,7 +1,8 @@
 #include "StosKoncowy.h"
 
-StosKoncowy::StosKoncowy()
+StosKoncowy::StosKoncowy(Karta::Kolor kolor)
 {
+
 }
 
 void StosKoncowy::polozKarte(Karta kladzionaKarta)
