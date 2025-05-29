@@ -8,20 +8,40 @@ Kolumna::Kolumna(int numerKolumny, Talia& talia)
     {
         Karta rozkladana = talia.rozdajKarte();
         karty.push_back(rozkladana);
+        rozkladana.toString();
     }
     Karta doOdkrycia = karty.front();
     doOdkrycia.odkryj();
+    doOdkrycia.toString();
 }
 
 bool Kolumna::czyMoznaDodac(const Karta& nowa,
     const Karta& naStosie) const
 {
-    bool roznyKolor = Karta::czyCzerwony(nowa.pobierzKolor()) !=
-        Karta::czyCzerwony(naStosie.pobierzKolor());
-    bool mniejszaOJeden = static_cast<int>(nowa.pobierzWartosc()) + 1 ==
-        static_cast<int>(naStosie.pobierzWartosc());
+    if (karty.empty()) {
+        if (nowa.pobierzWartosc() == Karta::Wartosc::Krol)
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else
+    {
+        bool roznyKolor = Karta::czyCzerwony(nowa.pobierzKolor()) !=
+            Karta::czyCzerwony(naStosie.pobierzKolor());
+        bool mniejszaOJeden = static_cast<int>(nowa.pobierzWartosc()) + 1 ==
+            static_cast<int>(naStosie.pobierzWartosc());
+        if (roznyKolor && mniejszaOJeden) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
-    return roznyKolor && mniejszaOJeden;
+    
 }
 
 void Kolumna::dodajKarte(const Karta& nowa)
@@ -45,4 +65,18 @@ bool Kolumna::czyMoznaZabrac(const Karta& zabierana) const
     return std::find(karty.begin(), karty.end(), zabierana) != karty.end();
     // UWAGA: ¿eby to dzia³a³o, musia³byœ przeci¹¿yæ operator== w Karta
 }
+int Kolumna::rozmiar() const {
+    return karty.size();
 
+}
+
+bool Kolumna::czyPusta() const
+{
+    if (karty.empty())
+    {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
